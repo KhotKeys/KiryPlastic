@@ -3,6 +3,7 @@
 A modern, responsive website for the **Kiryandongo Plastic Waste Management Project**, showcasing the initiative's **impact**, **achievements**, and **community involvement**.
 
 🌍 **Live Site**: [https://kiry-plastic.vercel.app/](https://kiry-plastic.vercel.app/)
+**Google Slides for the presentation**: (https://docs.google.com/presentation/d/15IyE9SrJ80zlTdBlGs-FdRCaZ37WExFn4VCT7sLk8Oc/edit?usp=sharing)
 
 ---
 
