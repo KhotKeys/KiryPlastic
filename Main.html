@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiryandongo Plastic Waste</title>
+    <!-- Favicon-->
+    <link rel="icon" href="images/logo.jpeg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .gallery {
+        padding: 80px 0;
+        background: #f9f9f9;
+    }
+
+    .gallery h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #333;
+        font-size: 2.5em;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust for responsiveness */
+        gap: 30px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .gallery-card img {
+        width: 100%;
+        height: auto; /* Ensure images maintain aspect ratio */
+        object-fit: cover;
+    }
+
+    .gallery-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 768px) {
+        .gallery-grid {
+            grid-template-columns: 1fr; /* Single column for smaller screens */
+        }
+    }
+
+    .gallery-card {
+        width: 100%;
+        height: 400px;
+        perspective: 1000px;
+        cursor: pointer;
+    }
+
+    .gallery-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .gallery-card:hover .gallery-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .gallery-card-front,
+    .gallery-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-card-front {
+        background: #fff;
+    }
+
+    .gallery-card-front img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card-front-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: #fff;
+    }
+
+    .card-front-content h3 {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+
+    .gallery-card-back {
+        background: var(--primary-color);
+        color: #fff;
+        transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    .card-back-content {
+        max-width: 100%;
+    }
+
+    .card-back-content h3 {
+        margin-bottom: 15px;
+        font-size: 1.5em;
+    }
+
+    .card-back-content p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .card-back-content ul {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+    }
+
+    .card-back-content ul li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+    }
+
+    .card-back-content ul li:before {
+        content: '→';
+        position: absolute;
+        left: 0;
+    }
+
+    @media (max-width: 1024px) {
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .gallery-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .gallery-card {
+            height: 350px;
+        }
+
+        .card-front-content h3 {
+            font-size: 1.3em;
+        }
+    }
+
+    .hero {
+        position: relative;
+        height: 75vh;
+        min-height: 450px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background: #006837;
+        padding-top: 80px;
+    }
+
+    .hero-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        width: 100%;
+        height: 150%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: all 3s ease-in-out;
+        transform: scale(1.1) rotate(-5deg);
+    }
+
+    .hero-image.active {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+
+    .hero-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            linear-gradient(45deg, rgba(0, 104, 55, 0.1) 25%, transparent 25%),
+            linear-gradient(-45deg, rgba(0, 104, 55, 0.1) 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, rgba(0, 104, 55, 0.1) 75%),
+            linear-gradient(-45deg, transparent 75%, rgba(0, 104, 55, 0.1) 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        animation: patternMove 20s linear infinite;
+        z-index: 1;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            135deg,
+            rgba(0, 181, 72, 0.8),
+            rgba(0, 128, 54, 0.7)
+        );
+        z-index: 2;
+        mix-blend-mode: multiply;
+        opacity: 0.85;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 5;
+        text-align: left;
+        color: #fff;
+        max-width: 900px;
+        padding: 0;
+        margin-left: 30px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes patternMove {
+        0% {
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+        100% {
+            background-position: 40px 40px, 40px 50px, 50px 30px, 30px 40px;
+        }
+    }
+
+    .hero-content h1 {
+        font-size: 4.8em;
+        line-height: 1;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        font-weight: 900;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: textGlow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes textGlow {
+        from {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        to {
+            text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    .hero-content .highlight {
+        color: #fff;
+        position: relative;
+        display: block;
+        margin: 0;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+        margin-bottom: 25px;
+        max-width: 500px;
+        line-height: 1.4;
+        opacity: 0.95;
+        font-weight: 300;
+    }
+
+    .explore-btn {
+        display: inline-block;
+        padding: 10px 40px;
+        background: #fff;
+        color: var(--primary-color);
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 1.1em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-top: -25px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .explore-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        background: var(--primary-color);
+        color: #fff;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            height: 70vh;
+            min-height: 400px;
+            padding-top: 70px;
+        }
+
+        .hero-content {
+            margin-left: 20px;
+            padding-right: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+
+        .hero-content p {
+            font-size: 1.1em;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .explore-btn {
+            padding: 14px 35px;
+            font-size: 1em;
+            margin-top: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero {
+            height: 65vh;
+            min-height: 350px;
+            padding-top: 60px;
+        }
+
+        .hero-content {
+            margin-left: 15px;
+            padding-right: 15px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8em;
+        }
+
+        .hero-content p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .explore-btn {
+            padding: 12px 30px;
+            margin-top: 12px;
+        }
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 5px 0;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 35px;
+        width: auto;
+    }
+
+    .nav-links {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        padding: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    @media (min-width: 769px) {
+        .nav-links {
+            display: flex; /* Always visible on larger screens */
+            flex-direction: row;
+            position: static;
+            background: none;
+            box-shadow: none;
+            padding: 0;
+        }
+
+        .nav-links.active {
+            display: flex; /* Ensure no change on larger screens */
+        }
+    }
+
+    .nav-links a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1em;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: var(--primary-color);
+    }
+
+    .register-btn {
+        background: var(--primary-color);
+        color: #fff !important;
+        padding: 8px 25px !important;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 15px rgba(0, 104, 55, 0.2);
+    }
+
+    @media (max-width: 768px) {
+        .mobile-menu-btn {
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 55px;
+            left: 0;
+            right: 0;
+            background: #fff;
+            padding: 15px;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .nav-links a {
+            width: 100%;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(0, 104, 55, 0.05);
+        }
+
+        .nav-links .register-btn {
+            padding: 8px 20px !important;
+            margin: 5px auto;
+            width: auto;
+            min-width: 180px;
+        }
+    }
+
+    .register-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 104, 55, 0.4);
+        background: #008544 !important;
+    }
+
+    .gallery-header {
+        text-align: center;
+        margin-bottom: 30px; /* Add spacing between header and images */
+        font-size: 2.5em;
+        color: #333;
+    }
+
+    .mobile-menu-btn {
+        display: none; /* Hidden by default for larger screens */
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1100; /* Ensure it is above other elements */
+    }
+
+    .mobile-menu-btn .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #333;
+        transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+        .mobile-menu-btn {
+            display: block; /* Show the button on smaller screens */
+        }
+
+        .nav-links {
+            display: none; /* Initially hidden */
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: #fff;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .nav-links.active {
+            display: flex; /* Show links when active */
+        }
+    }
+</style>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="./Main.html" class="logo">
+                <img src="images/logo.jpeg" alt="PlasticShield Logo">
+            </a>
+            <button class="mobile-menu-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links">
+                <a href="./Main.html">Home</a>
+                <a href="./impact.html">Impact</a>
+                <a href="./about.html">About</a>
+                <a href="contact.html" class="register-btn">Join Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+
+            <div class="hero-image" style="background-image: url('images/vonluteers.jpeg')">
+
+            </div>
+            <div class="hero-image" style="background-image: url('images/plastic1.jpeg')">
+
+            </div>
+            <div class="hero-image" style="background-image: url('images/project1.jpeg')">
+            </div>
+        </div>
+        <div class="hero-pattern"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>
+                Transform &nbsp;
+                <span class="highlight">Plastic Waste Risk</span>
+                Into Purpose
+            </h1><br>
+            <a href="./impact.html" class="explore-btn">Explore Initiatives</a>
+        </div>
+    </section>
+
+    
+
+   
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroImages = document.querySelectorAll('.hero-image');
+            let currentImageIndex = 0;
+
+            function switchImage() {
+                // Remove active class from all images
+                heroImages.forEach(image => image.classList.remove('active'));
+                
+                // Move to next image
+                currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+                
+                // Add active class to new image
+                heroImages[currentImageIndex].classList.add('active');
+            }
+
+            // Initial state
+            heroImages[0].classList.add('active');
+
+            // Switch image every 4 seconds
+            setInterval(switchImage, 4000);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenuBtn.addEventListener('click', function () {
+                navLinks.classList.toggle('active'); // Ensure the 'active' class is toggled
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            mobileMenuBtn.addEventListener('click', function () {
+                navLinks.classList.toggle('active'); // Toggle the 'active' class
+            });
+        });
+    </script>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="images/logo.jpeg" alt="Kiryandongo Plastic Waste Logo" class="footer-logo">
+                <p>
+                    Kiryandongo Plastic Waste is committed to reducing plastic pollution and empowering communities through sustainable solutions and education.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./Main.html">Home</a></li>
+                    <li><a href="./impact.html">Impact</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="contact.html">Join Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@kiryandongoplastic.org</li>
+                    <li><i class="fas fa-phone"></i> +256 700 000 000</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Kiryandongo, Uganda</li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div id="newsletter-message" class="newsletter-message"></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2025 Kiryandongo Plastic Waste. All rights reserved.</span>
+            <span class="footer-policy-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </span>
+        </div>
+    </footer>
+
+    <style>
+    .footer {
+        background: #2b6777;
+        color: #f8fafc;
+        padding: 48px 0 0 0;
+        border-radius: 12px 12px 0 0;
+        font-size: 1rem;
+        margin-top: 40px;
+        box-shadow: 0 -2px 16px rgba(43,103,119,0.08);
+    }
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 36px;
+        padding: 0 24px 32px 24px;
+    }
+    .footer-about {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-bottom: 14px;
+        border: 2px solid #fff;
+        object-fit: cover;
+    }
+    .footer-about p {
+        color: #e3f6f5;
+        font-size: 1.05rem;
+        margin-bottom: 0;
+    }
+    .footer-links h4,
+    .footer-contact h4,
+    .footer-newsletter h4 {
+        color: #fff;
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+    .footer-links ul,
+    .footer-contact ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-links ul li,
+    .footer-contact ul li {
+        margin-bottom: 10px;
+    }
+    .footer-links ul li a {
+        color: #e3f6f5;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .footer-links ul li a:hover {
+        color: #ffd166;
+    }
+    .footer-contact ul li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #e3f6f5;
+        font-size: 1rem;
+    }
+    .footer-social {
+        margin-top: 12px;
+    }
+    .footer-social a {
+        color: #e3f6f5;
+        margin-right: 12px;
+        font-size: 1.2rem;
+        transition: color 0.2s;
+    }
+    .footer-social a:hover {
+        color: #ffd166;
+    }
+    .footer-newsletter .newsletter-form {
+        display: flex;
+        align-items: center;
+        margin-top: 6px;
+    }
+    .footer-newsletter input[type="email"] {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 20px 0 0 20px;
+        outline: none;
+        font-size: 1rem;
+        background: #f8fafc;
+        color: #2b6777;
+        width: 140px;
+        transition: background 0.2s;
+    }
+    .footer-newsletter input[type="email"]:focus {
+        background: #e3f6f5;
+    }
+    .footer-newsletter button {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        background: #66ff69;
+        color: #2b6777;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .footer-newsletter button:hover {
+        background: #ffa600;
+    }
+    .newsletter-message {
+        margin-top: 8px;
+        font-size: 0.98rem;
+        color: #ffd166;
+        min-height: 18px;
+    }
+    .footer-bottom {
+        background: #25596b;
+        color: #e3f6f5;
+        text-align: center;
+        padding: 16px 0;
+        font-size: 0.98rem;
+        border-radius: 0 0 12px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .footer-policy-links a {
+        color: #ffd166;
+        text-decoration: none;
+        margin: 0 4px;
+        font-size: 0.97rem;
+    }
+    .footer-policy-links a:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 700px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+            gap: 28px;
+            padding: 0 12px 24px 12px;
+        }
+        .footer {
+            padding: 32px 0 0 0;
+        }
+    }
+    </style>
+    <script>
+    function subscribeNewsletter(event) {
+        event.preventDefault();
+        var form = event.target;
+        var email = form.querySelector('input[type="email"]').value;
+        var messageDiv = document.getElementById('newsletter-message');
+        // Simulate async subscription
+        setTimeout(function() {
+            messageDiv.textContent = "Thank you for subscribing!";
+            form.reset();
+        }, 600);
+    }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

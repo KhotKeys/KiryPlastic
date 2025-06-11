@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiryandongo Plastic Waste</title>
+    <!-- Favicon-->
+    <link rel="icon" href="images/logo.jpeg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="impact.css">
+    <style>
+        .register-btn {
+            background: #00b548; /* Default green background */
+            color: #fff !important;
+            padding: 8px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 104, 55, 0.2);
+        }
+
+        .register-btn:hover {
+            background: #0044cc; /* Change to blue on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 68, 204, 0.4);
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: rgba(0, 181, 72, 0.1);
+            color: #008544;
+        }
+
+        .nav-links a.active {
+            color: #008544;
+            border-bottom: 2px solid #008544; /* Underline active link */
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="Main.html" class="logo">
+                <img src="images/logo.jpeg" alt="PlasticShield Logo">
+            </a>
+            <div class="mobile-menu-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links">
+                <a href="Main.html">Home</a>
+                <a href="impact.html" class="active">Impact</a>
+                <a href="about.html">About</a>
+                <a href="./contact.html" class="register-btn">Join Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="impact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Get Involved</h1>
+                <div class="volunteer-content">
+                    <h2>Volunteer Opportunities</h2>
+                    <p>Join our team of dedicated volunteers and make a difference in your community. We offer various opportunities for involvement:</p>
+                    <ul class="volunteer-list">
+                        <li><i class="fas fa-bullhorn"></i> Community awareness campaigns</li>
+                        <li><i class="fas fa-recycle"></i> Collection point management</li>
+                        <li><i class="fas fa-chalkboard-teacher"></i> Educational workshops</li>
+                        <li><i class="fas fa-broom"></i> Clean-up drives</li>
+                    </ul>
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p><i class="fas fa-envelope"></i> info@kiryandongo.org</p>
+                        <p><i class="fas fa-phone"></i> +256 757 123 456</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Kiryandongo Refugee Settlement, Uganda</p>
+                    </div>
+                    <a href="contact.html" class="cta-button">Join Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="container">
+            <h2>Our Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h3>Species Impact</h3>
+                    <ul class="impact-list">
+                        <li><i class="fas fa-fish"></i> Protected marine life habitats</li>
+                        <li><i class="fas fa-leaf"></i> Restored coastal ecosystems</li>
+                        <li><i class="fas fa-paw"></i> Reduced harm to wildlife</li>
+                    </ul>
+                </div>
+                <div class="impact-card">
+                    <h3>Community Impact</h3>
+                    <ul class="impact-list">
+                        <li><i class="fas fa-users"></i> Engaged local communities</li>
+                        <li><i class="fas fa-handshake"></i> Created sustainable practices</li>
+                        <li><i class="fas fa-heart"></i> Improved public health</li>
+                    </ul>
+                </div>
+                <div class="impact-card">
+                    <h3>Environmental Impact</h3>
+                    <ul class="impact-list">
+                        <li><i class="fas fa-recycle"></i> Reduced plastic pollution</li>
+                        <li><i class="fas fa-tree"></i> Enhanced biodiversity</li>
+                        <li><i class="fas fa-water"></i> Cleaner water systems</li>
+                    </ul>
+                </div>
+                <div class="impact-card">
+                    <h3>Health Impact</h3>
+                    <ul class="impact-list">
+                        <li><i class="fas fa-heartbeat"></i> Safer marine food chain</li>
+                        <li><i class="fas fa-lungs"></i> Improved air quality</li>
+                        <li><i class="fas fa-hand-holding-medical"></i> Reduced health risks</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Impact Gallery Section -->
+            <div class="impact-gallery-section">
+                <h3>Impact in Action</h3>
+                <div class="impact-gallery">
+                    <!-- Gallery Item 1 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Lake and Swamp Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Item 2 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0094 2.JPEG" alt="Marine Life Protection" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Marine Life Protection</h4>
+                                <p>Protecting and preserving marine ecosystems</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Item 3 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0127 2.JPEG" alt="Community Engagement" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Community Engagement</h4>
+                                <p>Local communities participating in conservation efforts</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0124 2.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 5 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0152.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 6 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0161 2.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 8 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/project1.jpeg" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 9 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 10 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0222.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 11 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/testimonial3.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>PlasticCleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 12 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/vonluteers.jpeg" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>General Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 13 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                
+
+                    <!-- Gallery Item 15 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0219.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 16 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0225.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 17 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/plastic.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 18 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 19 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 20 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 21 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 22 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 23 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 24 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 25 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 26 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 27 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 28 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 29 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 30 -->
+                    <div class="gallery-item">
+                        <div class="gallery-image-container">
+                            <img src="images/IMG_0086.JPEG" alt="Beach Cleanup" class="gallery-image">
+                            <div class="gallery-overlay">
+                                <h4>Beach Cleanup</h4>
+                                <p>Volunteers working together to clean our beaches</p>
+                                <button class="gallery-btn" onclick="openModal(this)">View Image</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Impact Statistics Section -->
+            <div class="impact-stats-section">
+                <h3>Key Metrics</h3>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="fas fa-users stat-icon"></i>
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Volunteers</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-trash-alt stat-icon"></i>
+                        <div class="stat-number" data-target="350">0</div>
+                        <div class="stat-label">KG of Plastic Waste</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-map-marker-alt stat-icon"></i>
+                        <div class="stat-number" data-target="34">0</div>
+                        <div class="stat-label">Collection Points</div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-handshake stat-icon"></i>
+                        <div class="stat-number" data-target="1">0</div>
+                        <div class="stat-label">Partner Organization</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Impact Timeline Section -->
+            <div class="impact-timeline-section">
+                <h3>Our Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>September 2024</h4>
+                            <p>Project initiated with the first beach cleanup event in Kiryandongo.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>November 2024</h4>
+                            <p>Established first collection points and recruited initial volunteers.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>January 2025</h4>
+                            <p>Launched educational programs and community awareness campaigns.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>March 2025</h4>
+                            <p>Expanded to neighboring communities and established partnerships.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>May 2025</h4>
+                            <p>Celebrating our achievements and planning future expansion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Community Voices Section -->
+           <!-- Community Voices Section -->
+           <section class="testimonials-section">
+               <div class="container">
+                   <h2>Voices of Change</h2>
+                   <div class="testimonials-slider">
+                       <div class="testimonial active">
+                           <div class="testimonial-content">
+                               <p>"Through our awareness campaigns, we've seen a remarkable shift in how communities understand and support refugee integration. The ripple effect of education and empathy has created lasting bonds between local residents and newcomers."</p>
+                           </div>
+                           <div class="testimonial-author">
+                               <img src="./images/Ajak.jpg" alt="Dr. Kwame Owusu" class="testimonial-image" style="border-radius: 50%; width: 50px; height: 50px;">
+                               <div class="testimonial-info">
+                                   <h4>Ajak Deng Chol</h4>
+                                   <p>Community Coordinator | Community Outreach Director</p>
+                               </div>
+                           </div>
+                       </div>
+           
+                       <div class="testimonial">
+                           <div class="testimonial-content">
+                               <p>"Our health initiatives have made significant strides in providing accessible healthcare to refugee families. We've seen dramatic improvements in both physical and mental well-being through our comprehensive support programs."</p>
+                           </div>
+                           <div class="testimonial-author">
+                               <img src="./images/doctor.jpg" alt="Ms. Nia Thompson" class="testimonial-image" style="border-radius: 50%; width: 50px; height: 50px;">
+                               <div class="testimonial-info">
+                                   <h4>Dr. Nia Thompson</h4>
+                                   <p>Healthcare Program Coordinator</p>
+                               </div>
+                           </div>
+                       </div>
+           
+                       <div class="testimonial">
+                           <div class="testimonial-content">
+                               <p>"The transformation in our community has been incredible. By bringing together diverse voices and experiences, we've created a support network that empowers refugee families to thrive and contribute to their new home."</p>
+                           </div>
+                           <div class="testimonial-author">
+                               <img src="./images/bossman.jpg" alt="Mr. Jamal Patel" class="testimonial-image" style="border-radius: 50%; width: 50px; height: 50px;">
+                               <div class="testimonial-info">
+                                   <h4>Mr. Jamal Patel</h4>
+                                   <p>Community Integration Specialist</p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="testimonial-controls">
+                       <button class="testimonial-prev" onclick="prevTestimonial()"><i class="fas fa-chevron-left"></i></button>
+                       <button class="testimonial-next" onclick="nextTestimonial()"><i class="fas fa-chevron-right"></i></button>
+                   </div>
+               </div>
+           </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+    <!-- Budget Section -->
+    <section class="budget-section">
+        <div class="container">
+            <h2>Budget Allocation</h2>
+            <div class="budget-grid">
+                <div class="budget-item">
+                    <h4>Educational Workshops</h4>
+                    <div class="progress-container">
+                        <div class="progress" style="width: 20%"></div>
+                    </div>
+                    <p>
+                        <span class="percentage">20%</span>
+                        <span class="amount">$251</span>
+                    </p>
+                </div>
+                <div class="budget-item">
+                    <h4>Collection Points Setup</h4>
+                    <div class="progress-container">
+                        <div class="progress" style="width: 20%"></div>
+                    </div>
+                    <p>
+                        <span class="percentage">20%</span>
+                        <span class="amount">$251</span>
+                    </p>
+                </div>
+                <div class="budget-item">
+                    <h4>Plastic Transport for Recycling</h4>
+                    <div class="progress-container">
+                        <div class="progress" style="width: 15%"></div>
+                    </div>
+                    <p>
+                        <span class="percentage">15%</span>
+                        <span class="amount">$188</span>
+                    </p>
+                </div>
+                <div class="budget-item">
+                    <h4>Community Engagement</h4>
+                    <div class="progress-container">
+                        <div class="progress" style="width: 15%"></div>
+                    </div>
+                    <p>
+                        <span class="percentage">15%</span>
+                        <span class="amount">$188</span>
+                    </p>
+                </div>
+                <div class="budget-item">
+                    <h4>Educational flyers and posters</h4>
+                    <div class="progress-container">
+                        <div class="progress" style="width: 10%"></div>
+                    </div>
+                    <p>
+                        <span class="percentage">10%</span>
+                        <span class="amount">$126</span>
+                    </p>
+                </div>
+                <div class="budget-item">
+                    <h4>Logistical and material assistance</h4>
+                    <div class="progress-container">
+                        <div class="progress" style="width: 20%"></div>
+                    </div>
+                    <p>
+                        <span class="percentage">20%</span>
+                        <span class="amount">$251</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="images/logo.jpeg" alt="Kiryandongo Plastic Waste Logo" class="footer-logo">
+                <p>
+                    Kiryandongo Plastic Waste is committed to reducing plastic pollution and empowering communities through sustainable solutions and education.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="Main.html">Home</a></li>
+                    <li><a href="impact.html">Impact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="./contact.html">Join Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@kiryandongoplastic.org</li>
+                    <li><i class="fas fa-phone"></i> +256 700 000 000</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Kiryandongo, Uganda</li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div id="newsletter-message" class="newsletter-message"></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2025 Kiryandongo Plastic Waste. All rights reserved.</span>
+            <span class="footer-policy-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </span>
+        </div>
+    </footer>
+
+    <style>
+    .footer {
+        background: #2b6777;
+        color: #f8fafc;
+        padding: 48px 0 0 0;
+        border-radius: 12px 12px 0 0;
+        font-size: 1rem;
+        margin-top: 40px;
+        box-shadow: 0 -2px 16px rgba(43,103,119,0.08);
+    }
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 36px;
+        padding: 0 24px 32px 24px;
+    }
+    .footer-about {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-bottom: 14px;
+        border: 2px solid #fff;
+        object-fit: cover;
+    }
+    .footer-about p {
+        color: #e3f6f5;
+        font-size: 1.05rem;
+        margin-bottom: 0;
+    }
+    .footer-links h4,
+    .footer-contact h4,
+    .footer-newsletter h4 {
+        color: #fff;
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+    .footer-links ul,
+    .footer-contact ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-links ul li,
+    .footer-contact ul li {
+        margin-bottom: 10px;
+    }
+    .footer-links ul li a {
+        color: #e3f6f5;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .footer-links ul li a:hover {
+        color: #ffd166;
+    }
+    .footer-contact ul li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #e3f6f5;
+        font-size: 1rem;
+    }
+    .footer-social {
+        margin-top: 12px;
+    }
+    .footer-social a {
+        color: #e3f6f5;
+        margin-right: 12px;
+        font-size: 1.2rem;
+        transition: color 0.2s;
+    }
+    .footer-social a:hover {
+        color: #ffd166;
+    }
+    .footer-newsletter .newsletter-form {
+        display: flex;
+        align-items: center;
+        margin-top: 6px;
+    }
+    .footer-newsletter input[type="email"] {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 20px 0 0 20px;
+        outline: none;
+        font-size: 1rem;
+        background: #f8fafc;
+        color: #2b6777;
+        width: 140px;
+        transition: background 0.2s;
+    }
+    .footer-newsletter input[type="email"]:focus {
+        background: #e3f6f5;
+    }
+    .footer-newsletter button {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        background: #66ff69;
+        color: #2b6777;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .footer-newsletter button:hover {
+        background: #ffa600;
+    }
+    .newsletter-message {
+        margin-top: 8px;
+        font-size: 0.98rem;
+        color: #ffd166;
+        min-height: 18px;
+    }
+    .footer-bottom {
+        background: #25596b;
+        color: #e3f6f5;
+        text-align: center;
+        padding: 16px 0;
+        font-size: 0.98rem;
+        border-radius: 0 0 12px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .footer-policy-links a {
+        color: #ffd166;
+        text-decoration: none;
+        margin: 0 4px;
+        font-size: 0.97rem;
+    }
+    .footer-policy-links a:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 700px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+            gap: 28px;
+            padding: 0 12px 24px 12px;
+        }
+        .footer {
+            padding: 32px 0 0 0;
+        }
+    }
+    </style>
+    <script>
+    function subscribeNewsletter(event) {
+        event.preventDefault();
+        var form = event.target;
+        var email = form.querySelector('input[type="email"]').value;
+        var messageDiv = document.getElementById('newsletter-message');
+        // Simulate async subscription
+        setTimeout(function() {
+            messageDiv.textContent = "Thank you for subscribing!";
+            form.reset();
+        }, 600);
+    }
+    </script>
+
+    <script src="script.js"></script>
+    
+    <!-- Enhanced Animations and Interactions Script -->
+    <script>
+        // Image Modal Functionality
+        function openModal(button) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            const captionText = document.getElementById("modalCaption");
+            const imageContainer = button.closest('.gallery-image-container');
+            const image = imageContainer.querySelector('.gallery-image');
+            const title = imageContainer.querySelector('.gallery-overlay h4').textContent;
+            const description = imageContainer.querySelector('.gallery-overlay p').textContent;
+
+            modal.style.display = "block";
+            modalImg.src = image.src;
+            captionText.innerHTML = `<h4>${title}</h4><p>${description}</p>`;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+
+        // Testimonials Slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => {
+                testimonial.classList.remove('active');
+            });
+            testimonials[index].classList.add('active');
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        function prevTestimonial() {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        // Animated Statistics
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+
+                const updateCount = () => {
+                    current += step;
+                    if (current < target) {
+                        stat.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        stat.textContent = target;
+                    }
+                };
+
+                updateCount();
+            });
+        }
+
+        // Timeline Animation
+        function checkTimelineVisibility() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+
+        // Enhanced Scroll Animations
+        function handleScrollAnimations() {
+            // Animate elements when they come into view
+            const animatedElements = document.querySelectorAll('.impact-card, .gallery-item, .stat-item, .budget-item');
+            
+            animatedElements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('animate-in');
+                }
+            });
+            
+            // Check timeline visibility
+            checkTimelineVisibility();
+            
+            // Check if stats section is in view and animate if needed
+            const statsSection = document.querySelector('.impact-stats-section');
+            if (statsSection) {
+                const statsPosition = statsSection.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (statsPosition < screenPosition) {
+                    animateStats();
+                }
+            }
+        }
+
+        // Initialize animations when page loads
+        window.addEventListener('load', () => {
+            // Add animation classes to elements
+            document.querySelectorAll('.impact-card, .gallery-item, .stat-item, .budget-item').forEach(element => {
+                element.classList.add('animate-ready');
+            });
+            
+            // Trigger initial animations
+            handleScrollAnimations();
+            
+            // Animate stats immediately
+            animateStats();
+        });
+
+        // Check timeline visibility and trigger animations on scroll
+        window.addEventListener('scroll', handleScrollAnimations);
+        
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    
+                    // Animate hamburger to X
+                    const bars = this.querySelectorAll('.bar');
+                    bars[0].classList.toggle('rotate-45');
+                    bars[1].classList.toggle('opacity-0');
+                    bars[2].classList.toggle('rotate-negative-45');
+                });
+            }
+        });
+    </script>
+    <script src="animations.js"></script>
+</body>
+</html>

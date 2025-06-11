@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiryandongo Plastic Waste</title>
+    <!-- Favicon-->
+    <link rel="icon" href="images/logo.jpeg" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="impact.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<style>
+        .about-us-section {
+            background: #f8fafc;
+            padding: 40px 0 30px 0;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        .about-us-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .about-us-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+            color: #2b6777;
+        }
+        .about-us-section p {
+            font-size: 1.1rem;
+            color: #444;
+            margin-bottom: 32px;
+        }
+        .about-us-team {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(43,103,119,0.08);
+            padding: 18px 16px 10px 16px;
+            width: 180px;
+            text-align: center;
+        }
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .team-member h4 {
+            margin: 8px 0 2px 0;
+            color: #2b6777;
+            font-size: 1.1rem;
+        }
+        .team-member span {
+            color: #888;
+            font-size: 0.95rem;
+        }
+
+        .gallery-section {
+            padding: 40px 0 30px 0;
+            background: #e3f6f5;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        .gallery-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .gallery-section h2 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+            color: #2b6777;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 18px;
+            margin-top: 16px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 4px 16px rgba(43,103,119,0.12);
+        }
+        </style>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="Main.html" class="logo">
+                <img src="images/logo.jpeg" alt="PlasticShield Logo">
+            </a>
+            <div class="mobile-menu-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links">
+                <a href="Main.html">Home</a>
+                <a href="impact.html" class="active">Impact</a>
+                <a href="about.html">About</a>
+                <a href="./contact.html" class="register-btn">Join Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="impact-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Our Mission</h1>
+                <div class="volunteer-content">
+                    <h2>Join Us in Making a Difference</h2>
+                    <p>We are dedicated to protecting our environment and supporting local communities through sustainable practices and education.</p>
+                    <a href="contact.html" class="cta-button">Get Involved</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="container">
+            
+        <!-- About Us Section -->
+        <section class="about-us-section">
+            <div class="about-us-container">
+                <h2>About Us</h2>
+                <p>
+                    Kiryandongo Plastic Waste is a community-driven initiative focused on reducing plastic pollution and promoting sustainable living in Kiryandongo. Our team is passionate about environmental conservation, education, and empowering local communities to take action for a cleaner, greener future.
+                </p>
+                <div class="about-us-team">
+                    <div class="team-member">
+                        <img src="./images/gaby.jpg" alt="Team Member 1" style="border-radius: 50%; width: 50px; height: 50px;">
+                        <h4>Gabriel Pawuoi</h4>
+                        <span>Project Lead</span>
+                    </div>
+                    <div class="team-member">
+                        <img src="./images/Ajak.jpg" alt="Team Member 2" style="border-radius: 50%; width: 50px; height: 50px;">
+                        <h4>Peter Ajak Deng Chol</h4>
+                        <span>Community Coordinator</span>
+                    </div>
+                    <div class="team-member">
+                        <img src="./images/chol.jpg" alt="Team Member 3" style="border-radius: 50%; width: 50px; height: 50px;">
+                        <h4>Chol Mayen Dau</h4>
+                        <span>Education Specialist</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <h2>Our Work in Pictures</h2>
+                <div class="gallery-grid">
+                    <img src="./images/plastic1.jpeg" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/IMG_0079 2.JPEG" alt="Community Workshop" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/project.jpeg" alt="Recycling Process" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/vonluteers.jpeg" alt="Team Volunteers" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/plastic1.jpeg" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/IMG_0079 2.JPEG" alt="Community Workshop" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/project.jpeg" alt="Recycling Process" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/vonluteers.jpeg" alt="Team Volunteers" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/plastic1.jpeg" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/IMG_0079 2.JPEG" alt="Community Workshop" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/project.jpeg" alt="Recycling Process" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/vonluteers.jpeg" alt="Team Volunteers" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/plastic1.jpeg" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/IMG_0079 2.JPEG" alt="Community Workshop" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/project.jpeg" alt="Recycling Process" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/vonluteers.jpeg" alt="Team Volunteers" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/plastic1.jpeg" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/IMG_0079 2.JPEG" alt="Community Workshop" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    
+                    <img src="./images/IMG_0239.JPEG" alt="Team Volunteers" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/IMG_0113 2.JPEG" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/IMG_0053.JPEG" alt="Community Workshop" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/IMG_0151.JPEG" alt="Recycling Process" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                    <img src="./images/IMG_0267.JPEG" alt="Team Volunteers" onclick="openModal(this)" style="width: 150px; height: 150px;">
+                </div>
+            </div>
+        </section>
+
+
+        
+
+        <h2>Our Impact</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h3>Environmental Protection</h3>
+                    <ul class="impact-list">
+                        <li><i class="fas fa-recycle"></i> Reduced plastic waste</li>
+                        <li><i class="fas fa-tree"></i> Enhanced biodiversity</li>
+                    </ul>
+                </div>
+                <div class="impact-card">
+                    <h3>Community Engagement</h3>
+                    <ul class="impact-list">
+                        <li><i class="fas fa-users"></i> Empowered local communities</li>
+                        <li><i class="fas fa-handshake"></i> Fostered sustainable practices</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="images/logo.jpeg" alt="Kiryandongo Plastic Waste Logo" class="footer-logo">
+                <p>
+                    Kiryandongo Plastic Waste is committed to reducing plastic pollution and empowering communities through sustainable solutions and education.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./Main.html">Home</a></li>
+                    <li><a href="./impact.html">Impact</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Join Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@kiryandongoplastic.org</li>
+                    <li><i class="fas fa-phone"></i> +256 700 000 000</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Kiryandongo, Uganda</li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div id="newsletter-message" class="newsletter-message"></div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2025 Kiryandongo Plastic Waste. All rights reserved.</span>
+            <span class="footer-policy-links">
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </span>
+        </div>
+    </footer>
+
+    <style>
+    .footer {
+        background: #2b6777;
+        color: #f8fafc;
+        padding: 48px 0 0 0;
+        border-radius: 12px 12px 0 0;
+        font-size: 1rem;
+        margin-top: 40px;
+        box-shadow: 0 -2px 16px rgba(43,103,119,0.08);
+    }
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 36px;
+        padding: 0 24px 32px 24px;
+    }
+    .footer-about {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-bottom: 14px;
+        border: 2px solid #fff;
+        object-fit: cover;
+    }
+    .footer-about p {
+        color: #e3f6f5;
+        font-size: 1.05rem;
+        margin-bottom: 0;
+    }
+    .footer-links h4,
+    .footer-contact h4,
+    .footer-newsletter h4 {
+        color: #fff;
+        margin-bottom: 12px;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+    .footer-links ul,
+    .footer-contact ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer-links ul li,
+    .footer-contact ul li {
+        margin-bottom: 10px;
+    }
+    .footer-links ul li a {
+        color: #e3f6f5;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+    .footer-links ul li a:hover {
+        color: #ffd166;
+    }
+    .footer-contact ul li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #e3f6f5;
+        font-size: 1rem;
+    }
+    .footer-social {
+        margin-top: 12px;
+    }
+    .footer-social a {
+        color: #e3f6f5;
+        margin-right: 12px;
+        font-size: 1.2rem;
+        transition: color 0.2s;
+    }
+    .footer-social a:hover {
+        color: #ffd166;
+    }
+    .footer-newsletter .newsletter-form {
+        display: flex;
+        align-items: center;
+        margin-top: 6px;
+    }
+    .footer-newsletter input[type="email"] {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 20px 0 0 20px;
+        outline: none;
+        font-size: 1rem;
+        background: #f8fafc;
+        color: #2b6777;
+        width: 140px;
+        transition: background 0.2s;
+    }
+    .footer-newsletter input[type="email"]:focus {
+        background: #e3f6f5;
+    }
+    .footer-newsletter button {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        background: #66ff69;
+        color: #2b6777;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .footer-newsletter button:hover {
+        background: #ffa600;
+    }
+    .newsletter-message {
+        margin-top: 8px;
+        font-size: 0.98rem;
+        color: #ffd166;
+        min-height: 18px;
+    }
+    .footer-bottom {
+        background: #25596b;
+        color: #e3f6f5;
+        text-align: center;
+        padding: 16px 0;
+        font-size: 0.98rem;
+        border-radius: 0 0 12px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .footer-policy-links a {
+        color: #ffd166;
+        text-decoration: none;
+        margin: 0 4px;
+        font-size: 0.97rem;
+    }
+    .footer-policy-links a:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 700px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+            gap: 28px;
+            padding: 0 12px 24px 12px;
+        }
+        .footer {
+            padding: 32px 0 0 0;
+        }
+    }
+    </style>
+    <script>
+    function subscribeNewsletter(event) {
+        event.preventDefault();
+        var form = event.target;
+        var email = form.querySelector('input[type="email"]').value;
+        var messageDiv = document.getElementById('newsletter-message');
+        // Simulate async subscription
+        setTimeout(function() {
+            messageDiv.textContent = "Thank you for subscribing!";
+            form.reset();
+        }, 600);
+    }
+    </script>
+
+<script>
+        function openModal(img) {
+            var modal = document.getElementById('imageModal');
+            var modalImg = document.getElementById('modalImage');
+            var caption = document.getElementById('modalCaption');
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            caption.innerHTML = img.alt;
+        }
+        function closeModal() {
+            document.getElementById('imageModal').style.display = "none";
+        }
+
+        function subscribeNewsletter(event) {
+        event.preventDefault();
+        var form = event.target;
+        var email = form.querySelector('input[type="email"]').value;
+        var messageDiv = document.getElementById('newsletter-message');
+        // Simulate async subscription
+        setTimeout(function() {
+            messageDiv.textContent = "Thank you for subscribing!";
+            form.reset();
+        }, 600);
+    }
+        </script>
+    
+</body>
+</html>

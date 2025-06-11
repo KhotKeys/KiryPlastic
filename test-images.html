@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-image {
+            max-width: 300px;
+            height: auto;
+            margin: 10px 0;
+            display: block;
+        }
+        h2 {
+            color: #333;
+        }
+        .path-info {
+            background: #f5f5f5;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Path Test</h1>
+    
+    <div class="test-section">
+        <h2>Test 1: Relative Path (with ./)</h2>
+        <div class="path-info">Path: ./images/IMG_0086.JPEG</div>
+        <img src="./images/IMG_0086.JPEG" alt="Test 1" class="test-image">
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 2: Relative Path (without ./)</h2>
+        <div class="path-info">Path: images/IMG_0086.JPEG</div>
+        <img src="images/IMG_0086.JPEG" alt="Test 2" class="test-image">
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 3: Absolute Path</h2>
+        <div class="path-info">Path: /images/IMG_0086.JPEG</div>
+        <img src="/images/IMG_0086.JPEG" alt="Test 3" class="test-image">
+    </div>
+    
+    <div class="test-section">
+        <h2>Test 4: Different Image Format</h2>
+        <div class="path-info">Path: images/IMG_0093.jpg</div>
+        <img src="images/IMG_0093.jpg" alt="Test 4" class="test-image">
+    </div>
+</body>
+</html> 
