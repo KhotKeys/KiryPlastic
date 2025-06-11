@@ -1,87 +1,132 @@
 # Kiryandongo Plastic Waste Management Project Website
 
-A modern, responsive website for the Kiryandongo Plastic Waste Management Project, showcasing the initiative's impact, achievements, and community involvement.
+A modern, responsive website for the **Kiryandongo Plastic Waste Management Project**, showcasing the initiative's **impact**, **achievements**, and **community involvement**.
 
-## Features
+🌍 **Live Site**: [https://kiry-plastic.vercel.app/](https://kiry-plastic.vercel.app/)
 
-- Modern, responsive design
-- Interactive animations and transitions
-- Image gallery with lightbox
-- Contact form for volunteer registration
-- Impact metrics visualization
-- Project timeline
-- Mobile-friendly navigation
+---
 
-## Project Structure
+## 🌟 Features
+
+- ✅ Modern, responsive design  
+- ✨ Interactive animations and transitions  
+- 🖼️ Image gallery with lightbox functionality  
+- 📝 Contact form for volunteer registration  
+- 📊 Impact metrics visualization  
+- 🕒 Project timeline  
+- 📱 Mobile-friendly navigation  
+
+---
+
+## 📁 Project Structure
 
 ```
+
 Home/
-├── Main.html          # Main landing page
-├── contact.html       # Contact and volunteer registration page
-├── impact.html        # Detailed impact metrics page
-├── styles.css         # Main stylesheet
-├── script.js          # JavaScript functionality
-└── images/           # Image assets directory
-```
+├── Main.html               # Main landing page
+├── contact.html            # Contact and volunteer registration page
+├── impact.html             # Detailed impact metrics page
+├── styles.css              # Main stylesheet
+├── script.js               # JavaScript functionality
+└── images/                 # Image assets directory
 
-## Setup Instructions
+````
 
-1. Clone the repository
-2. Open `Home/Main.html` in your web browser to view the website
-3. For development:
-   - Use a local development server (e.g., Live Server in VS Code)
-   - Make changes to HTML, CSS, and JavaScript files
-   - Test responsiveness using browser dev tools
+---
 
-## Image Requirements
+## 🚀 Setup Instructions
 
-The website requires the following images in the `images` directory:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/kiryandongo-plastic-project.git
+   cd kiryandongo-plastic-project/Home
+````
 
-- `hero-bg.jpg` (1920x1080px) - Hero section background
-- `collection-point.jpg` (800x600px) - Collection point showcase
-- `community-workshop.jpg` (800x600px) - Community workshop activities
-- `youth-volunteers.jpg` (800x600px) - Youth volunteer engagement
-- `recycling-process.jpg` (800x600px) - Recycling process visualization
+2. **Open the website locally**
+   Open `Main.html` in your web browser.
 
-See `Home/placeholder-images.html` for visual references of required images.
+3. **For development**
 
-## Development Guidelines
+   * Use a local development server (e.g., **Live Server** in VS Code)
+   * Make edits to HTML, CSS, or JS as needed
+   * Use browser developer tools to test responsiveness
 
-1. **Styling**
-   - Use CSS variables for consistent theming
-   - Follow mobile-first approach
-   - Maintain clean, semantic HTML structure
+---
 
-2. **JavaScript**
-   - Use modern ES6+ features
-   - Implement smooth animations
-   - Ensure cross-browser compatibility
+## 🖼️ Image Requirements
 
-3. **Images**
-   - Optimize all images for web use
-   - Maintain aspect ratios
-   - Use descriptive alt text
+Place the following images in the `images/` directory:
 
-4. **Accessibility**
-   - Use semantic HTML elements
-   - Include proper ARIA labels
-   - Ensure keyboard navigation
-   - Maintain good color contrast
+| File Name                | Resolution  | Purpose                         |
+| ------------------------ | ----------- | ------------------------------- |
+| `hero-bg.jpg`            | 1920x1080px | Hero section background         |
+| `collection-point.jpg`   | 800x600px   | Collection point showcase       |
+| `community-workshop.jpg` | 800x600px   | Community workshop activities   |
+| `youth-volunteers.jpg`   | 800x600px   | Youth volunteer engagement      |
+| `recycling-process.jpg`  | 800x600px   | Recycling process visualization |
 
-## Browser Support
+📄 See `Home/placeholder-images.html` for visual references of the required images.
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+---
 
-## Contributing
+## 🛠️ Development Guidelines
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+### Styling
 
-## License
+* Use CSS variables for consistent theming
+* Follow mobile-first design principles
+* Write clean, semantic HTML
 
-This project is licensed under the MIT License - see the LICENSE file for details. #
+### JavaScript
+
+* Use modern ES6+ syntax
+* Implement smooth, performant animations
+* Ensure cross-browser compatibility
+
+### Images
+
+* Optimize for web (e.g., compressed JPEG/PNG)
+* Maintain original aspect ratios
+* Use meaningful and descriptive `alt` attributes
+
+### Accessibility
+
+* Use semantic HTML tags
+* Include proper ARIA labels
+* Support keyboard navigation
+* Maintain good color contrast
+
+---
+
+## 🌐 Browser Support
+
+| Browser        | Supported |
+| -------------- | --------- |
+| Chrome         | ✅ Latest  |
+| Firefox        | ✅ Latest  |
+| Safari         | ✅ Latest  |
+| Microsoft Edge | ✅ Latest  |
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions!
+
+1. **Fork** the repository
+2. Create a **feature branch**
+3. Make your changes and commit
+4. Submit a **pull request**
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+See the [`LICENSE`](./LICENSE) file for more information.
+
+---
+
+> Made with ❤️ for the community of **Kiryandongo**.
+> Visit the live project at [https://kiry-plastic.vercel.app/](https://kiry-plastic.vercel.app/)
+
